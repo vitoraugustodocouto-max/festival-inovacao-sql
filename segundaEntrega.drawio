@@ -1,0 +1,458 @@
+<mxfile host="app.diagrams.net" pages="2">
+  <diagram name="01 - Modelo conceitual" id="uD2WQXQALmPJXfoEOExD">
+    <mxGraphModel dx="1977" dy="1096" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="relacoes" parent="0" value="01 - Relacionamentos" />
+        <mxCell id="ministra" parent="relacoes" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;rhombus;" value="Ministra" vertex="1">
+          <mxGeometry height="100" width="160" x="550" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="possui" parent="relacoes" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;rhombus;" value="Possui" vertex="1">
+          <mxGeometry height="90" width="150" x="1830" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="sedia" parent="relacoes" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;rhombus;" value="Sedia" vertex="1">
+          <mxGeometry height="90" width="150" x="640" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="exige" parent="relacoes" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;rhombus;" value="Exige" vertex="1">
+          <mxGeometry height="100" width="150" x="1030" y="1270" as="geometry" />
+        </mxCell>
+        <mxCell id="heranca_pessoa" edge="1" parent="relacoes" source="pessoa" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="isa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="heranca_palestrante" edge="1" parent="relacoes" source="isa" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.25;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="palestrante">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="heranca_participante" edge="1" parent="relacoes" source="isa" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.75;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="participante">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1620" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pal_ministra" edge="1" parent="relacoes" source="palestrante" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ministra">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="760" />
+              <mxPoint x="630" y="760" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ministra_atv" edge="1" parent="relacoes" source="ministra" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="atividade">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="820" y="880" />
+              <mxPoint x="820" y="930" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card_pal" parent="relacoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=17;fontColor=#26354a;strokeColor=none;fillColor=none;" value="(0,N)" vertex="1">
+          <mxGeometry height="30" width="110" x="380" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="card_atv_pal" parent="relacoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=17;fontColor=#26354a;strokeColor=none;fillColor=none;" value="(0,1)" vertex="1">
+          <mxGeometry height="28" width="95" x="835" y="899" as="geometry" />
+        </mxCell>
+        <mxCell id="par_inscreve" edge="1" parent="relacoes" source="participante" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="inscricao">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1620" y="755" />
+              <mxPoint x="1560" y="755" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inscreve_atv" edge="1" parent="relacoes" source="inscricao" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="atividade">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1420" y="880" />
+              <mxPoint x="1420" y="930" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card_par_nm" parent="relacoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=17;fontColor=#26354a;strokeColor=none;fillColor=none;" value="(0,N)" vertex="1">
+          <mxGeometry height="28" width="110" x="1495" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="card_atv_nm" parent="relacoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=17;fontColor=#26354a;strokeColor=none;fillColor=none;" value="(0,N)" vertex="1">
+          <mxGeometry height="28" width="110" x="1180" y="895" as="geometry" />
+        </mxCell>
+        <mxCell id="par_possui" edge="1" parent="relacoes" source="participante" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="possui">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1905" y="585" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="possui_cred" edge="1" parent="relacoes" source="possui" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="credencial">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1905" y="860" />
+              <mxPoint x="1920" y="860" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card_par_cr" parent="relacoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=17;fontColor=#26354a;strokeColor=none;fillColor=none;" value="(0,1)" vertex="1">
+          <mxGeometry height="27" width="100" x="1760" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="card_cr" parent="relacoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=17;fontColor=#26354a;strokeColor=none;fillColor=none;" value="(1,1)" vertex="1">
+          <mxGeometry height="28" width="105" x="1940" y="875" as="geometry" />
+        </mxCell>
+        <mxCell id="esp_sedia" edge="1" parent="relacoes" source="espaco" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="sedia">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="1310" />
+              <mxPoint x="600" y="1265" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sedia_atv" edge="1" parent="relacoes" source="sedia" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="atividade">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="715" y="1170" />
+              <mxPoint x="745" y="1170" />
+              <mxPoint x="745" y="945" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="card_esp" parent="relacoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=17;fontColor=#26354a;strokeColor=none;fillColor=none;" value="(0,N)" vertex="1">
+          <mxGeometry height="30" width="100" x="550" y="1320" as="geometry" />
+        </mxCell>
+        <mxCell id="card_atv_esp" parent="relacoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=17;fontColor=#26354a;strokeColor=none;fillColor=none;" value="(0,1)" vertex="1">
+          <mxGeometry height="28" width="100" x="825" y="955" as="geometry" />
+        </mxCell>
+        <mxCell id="rec_dependente" edge="1" parent="relacoes" source="atividade" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.15;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="exige">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="790" y="960" />
+              <mxPoint x="790" y="1320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rec_prerequisito" edge="1" parent="relacoes" source="exige" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.8;entryDx=0;entryDy=0;" target="atividade">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1380" y="1320" />
+              <mxPoint x="1380" y="948" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rec_dep_label" parent="relacoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=17;fontColor=#26354a;strokeColor=none;fillColor=none;" value="Dependente (0,1)" vertex="1">
+          <mxGeometry height="30" width="190" x="830" y="1275" as="geometry" />
+        </mxCell>
+        <mxCell id="rec_pre_label" parent="relacoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=17;fontColor=#26354a;strokeColor=none;fillColor=none;" value="Pré-requisito (0,N)" vertex="1">
+          <mxGeometry height="30" width="190" x="1185" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="pessoas" parent="0" value="02 - Gestao de Pessoas" />
+        <mxCell id="pessoa" parent="pessoas" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fillColor=#e9f1ff;strokeColor=#406a9c;strokeWidth=2;rounded=0;" value="Pessoa" vertex="1">
+          <mxGeometry height="60" width="200" x="950" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="isa" parent="pessoas" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fillColor=#e9f1ff;strokeColor=#406a9c;strokeWidth=2;shape=triangle;direction=south;" value="ISA" vertex="1">
+          <mxGeometry height="60" width="80" x="1010" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="palestrante" parent="pessoas" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fillColor=#e9f1ff;strokeColor=#406a9c;strokeWidth=2;rounded=0;" value="Palestrante" vertex="1">
+          <mxGeometry height="60" width="220" x="390" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="participante" parent="pessoas" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fillColor=#e9f1ff;strokeColor=#406a9c;strokeWidth=2;rounded=0;" value="Participante" vertex="1">
+          <mxGeometry height="60" width="220" x="1510" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="p_id" parent="pessoas" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#e9f1ff;strokeColor=#406a9c;strokeWidth=2;ellipse;fontStyle=4;" value="id_pessoa" vertex="1">
+          <mxGeometry height="45" width="180" x="720" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="link_p_id" edge="1" parent="pessoas" source="p_id" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.2;entryY=0;entryDx=0;entryDy=0;" target="pessoa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p_nome" parent="pessoas" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#e9f1ff;strokeColor=#406a9c;strokeWidth=2;ellipse;" value="nome" vertex="1">
+          <mxGeometry height="45" width="160" x="930" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="link_p_nome" edge="1" parent="pessoas" source="p_nome" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.4;entryY=0;entryDx=0;entryDy=0;" target="pessoa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p_email" parent="pessoas" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#e9f1ff;strokeColor=#406a9c;strokeWidth=2;ellipse;" value="email" vertex="1">
+          <mxGeometry height="45" width="160" x="1120" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="link_p_email" edge="1" parent="pessoas" source="p_email" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.6;entryY=0;entryDx=0;entryDy=0;" target="pessoa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p_telefone" parent="pessoas" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#e9f1ff;strokeColor=#406a9c;strokeWidth=2;ellipse;" value="telefone" vertex="1">
+          <mxGeometry height="45" width="170" x="1310" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="link_p_telefone" edge="1" parent="pessoas" source="p_telefone" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" target="pessoa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pal_cv" parent="pessoas" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#e9f1ff;strokeColor=#406a9c;strokeWidth=2;ellipse;" value="minicurriculo" vertex="1">
+          <mxGeometry height="45" width="200" x="110" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="link_pal_cv" edge="1" parent="pessoas" source="pal_cv" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="palestrante">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pal_area" parent="pessoas" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#e9f1ff;strokeColor=#406a9c;strokeWidth=2;ellipse;" value="area_especialidade" vertex="1">
+          <mxGeometry height="45" width="230" x="100" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="link_pal_area" edge="1" parent="pessoas" source="pal_area" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="palestrante">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="par_tipo" parent="pessoas" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#e9f1ff;strokeColor=#406a9c;strokeWidth=2;ellipse;" value="tipo_ingresso" vertex="1">
+          <mxGeometry height="45" width="210" x="1800" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="link_par_tipo" edge="1" parent="pessoas" source="par_tipo" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="participante">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="evento" parent="0" value="03 - Gestao do Evento" />
+        <mxCell id="atividade" parent="evento" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fillColor=#e9f4e8;strokeColor=#4d8152;strokeWidth=2;rounded=0;" value="Atividade" vertex="1">
+          <mxGeometry height="60" width="220" x="940" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="espaco" parent="evento" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fillColor=#e9f4e8;strokeColor=#4d8152;strokeWidth=2;rounded=0;" value="Espaço" vertex="1">
+          <mxGeometry height="60" width="220" x="340" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="a_id" parent="evento" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#e9f4e8;strokeColor=#4d8152;strokeWidth=2;ellipse;fontStyle=4;" value="id_atividade" vertex="1">
+          <mxGeometry height="45" width="180" x="770" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="link_a_id" edge="1" parent="evento" source="a_id" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.2;entryY=0;entryDx=0;entryDy=0;" target="atividade">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a_titulo" parent="evento" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#e9f4e8;strokeColor=#4d8152;strokeWidth=2;ellipse;" value="titulo" vertex="1">
+          <mxGeometry height="45" width="150" x="980" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="link_a_titulo" edge="1" parent="evento" source="a_titulo" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="atividade">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a_duracao" parent="evento" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#e9f4e8;strokeColor=#4d8152;strokeWidth=2;ellipse;" value="duracao_minutos" vertex="1">
+          <mxGeometry height="45" width="220" x="1160" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="link_a_duracao" edge="1" parent="evento" source="a_duracao" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" target="atividade">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a_desc" parent="evento" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#e9f4e8;strokeColor=#4d8152;strokeWidth=2;ellipse;" value="descricao" vertex="1">
+          <mxGeometry height="45" width="210" x="850" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="link_a_desc" edge="1" parent="evento" source="a_desc" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.3;entryY=1;entryDx=0;entryDy=0;" target="atividade">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a_data" parent="evento" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#e9f4e8;strokeColor=#4d8152;strokeWidth=2;ellipse;" value="data_hora_inicio" vertex="1">
+          <mxGeometry height="45" width="230" x="1110" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="link_a_data" edge="1" parent="evento" source="a_data" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.7;entryY=1;entryDx=0;entryDy=0;" target="atividade">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_id" parent="evento" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#e9f4e8;strokeColor=#4d8152;strokeWidth=2;ellipse;fontStyle=4;" value="id_espaco" vertex="1">
+          <mxGeometry height="45" width="180" x="170" y="1420" as="geometry" />
+        </mxCell>
+        <mxCell id="link_e_id" edge="1" parent="evento" source="e_id" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.2;entryY=1;entryDx=0;entryDy=0;" target="espaco">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_nome" parent="evento" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#e9f4e8;strokeColor=#4d8152;strokeWidth=2;ellipse;" value="nome_local" vertex="1">
+          <mxGeometry height="45" width="190" x="390" y="1450" as="geometry" />
+        </mxCell>
+        <mxCell id="link_e_nome" edge="1" parent="evento" source="e_nome" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="espaco">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cap" parent="evento" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#e9f4e8;strokeColor=#4d8152;strokeWidth=2;ellipse;" value="capacidade_maxima" vertex="1">
+          <mxGeometry height="45" width="250" x="610" y="1420" as="geometry" />
+        </mxCell>
+        <mxCell id="link_e_cap" edge="1" parent="evento" source="e_cap" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.8;entryY=1;entryDx=0;entryDy=0;" target="espaco">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inscricoes" parent="0" value="04 - Inscricoes" />
+        <mxCell id="inscricao" parent="inscricoes" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fillColor=#fff4d7;strokeColor=#b78b24;strokeWidth=2;rhombus;" value="Inscrição" vertex="1">
+          <mxGeometry height="100" width="160" x="1480" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="i_data" parent="inscricoes" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#fff4d7;strokeColor=#b78b24;strokeWidth=2;ellipse;" value="data_inscricao" vertex="1">
+          <mxGeometry height="45" width="210" x="1450" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="link_i_data" edge="1" parent="inscricoes" source="i_data" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=0.75;entryDx=0;entryDy=0;" target="inscricao">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i_status" parent="inscricoes" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#fff4d7;strokeColor=#b78b24;strokeWidth=2;ellipse;" value="status_checkin" vertex="1">
+          <mxGeometry height="45" width="210" x="1660" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="link_i_status" edge="1" parent="inscricoes" source="i_status" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=0.75;entryDx=0;entryDy=0;" target="inscricao">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="credenciais" parent="0" value="05 - Credenciais" />
+        <mxCell id="credencial" parent="credenciais" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fillColor=#f0eaff;strokeColor=#7a5aa3;strokeWidth=2;rounded=0;" value="Credencial" vertex="1">
+          <mxGeometry height="60" width="220" x="1810" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="cr_id" parent="credenciais" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#f0eaff;strokeColor=#7a5aa3;strokeWidth=2;ellipse;fontStyle=4;" value="id_credencial" vertex="1">
+          <mxGeometry height="45" width="190" x="1800" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="link_cr_id" edge="1" parent="credenciais" source="cr_id" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.3;entryY=1;entryDx=0;entryDy=0;" target="credencial">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cr_codigo" parent="credenciais" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;fillColor=#f0eaff;strokeColor=#7a5aa3;strokeWidth=2;ellipse;" value="codigo" vertex="1">
+          <mxGeometry height="45" width="150" x="2020" y="1120" as="geometry" />
+        </mxCell>
+        <mxCell id="link_cr_codigo" edge="1" parent="credenciais" source="cr_codigo" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.8;entryY=1;entryDx=0;entryDy=0;" target="credencial">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legenda" parent="0" value="06 - Legenda e orientacoes" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="02 - Modelo relacional" id="v9JzHqt6tG0z47Y5YLTz">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="2200" pageHeight="1650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="relacoes" parent="0" value="01 - Relacionamentos" />
+        <mxCell id="heranca_pal" edge="1" parent="relacoes" source="pessoa" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.15;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="palestrante">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="878" y="415" />
+              <mxPoint x="370" y="415" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="heranca_par" edge="1" parent="relacoes" source="pessoa" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.85;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="participante">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1242" y="415" />
+              <mxPoint x="1790" y="415" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="heranca_pal_text" parent="relacoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#26354a;strokeColor=none;fillColor=none;" value="Herança: PK da subclasse também é FK" vertex="1">
+          <mxGeometry height="32" width="590" x="160" y="372" as="geometry" />
+        </mxCell>
+        <mxCell id="heranca_par_text" parent="relacoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#26354a;strokeColor=none;fillColor=none;" value="Herança: PK da subclasse também é FK" vertex="1">
+          <mxGeometry height="32" width="620" x="1370" y="372" as="geometry" />
+        </mxCell>
+        <mxCell id="possui" edge="1" parent="relacoes" source="participante" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="credencial">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2140" y="557.5" />
+              <mxPoint x="2140" y="235" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="possui_label" parent="relacoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#26354a;strokeColor=none;fillColor=none;" value="Possui 1:1" vertex="1">
+          <mxGeometry height="34" width="225" x="1910" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="ministra" edge="1" parent="relacoes" source="palestrante" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" target="atividade">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="725" />
+              <mxPoint x="730" y="725" />
+              <mxPoint x="730" y="880.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ministra_label" parent="relacoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fontColor=#26354a;strokeColor=none;fillColor=none;" value="Ministra 1:N" vertex="1">
+          <mxGeometry height="34" width="255" x="420" y="682" as="geometry" />
+        </mxCell>
+        <mxCell id="sedia" edge="1" parent="relacoes" source="espaco" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.78;entryDx=0;entryDy=0;" target="atividade">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="710" y="1160" />
+              <mxPoint x="710" y="1041.3" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sedia_label" parent="relacoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fontColor=#26354a;strokeColor=none;fillColor=none;" value="Sedia 1:N" vertex="1">
+          <mxGeometry height="34" width="210" x="465" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="realiza_inscricao" edge="1" parent="relacoes" source="participante" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="inscricoes_atividade">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1790" y="750" />
+              <mxPoint x="1835" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="realiza_label" parent="relacoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fontColor=#26354a;strokeColor=none;fillColor=none;" value="Realiza 1:N" vertex="1">
+          <mxGeometry height="34" width="240" x="1870" y="785" as="geometry" />
+        </mxCell>
+        <mxCell id="recebe_inscricao" edge="1" parent="relacoes" source="atividade" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="inscricoes_atividade">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1450" y="947.5" />
+              <mxPoint x="1450" y="1017.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="recebe_label" parent="relacoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#26354a;strokeColor=none;fillColor=none;" value="Recebe 1:N" vertex="1">
+          <mxGeometry height="34" width="235" x="1375" y="878" as="geometry" />
+        </mxCell>
+        <mxCell id="prerequisito" edge="1" parent="relacoes" source="atividade" style="edgeStyle=none;rounded=0;html=0;endArrow=none;startArrow=none;strokeColor=#586879;strokeWidth=2;exitX=0.3;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.86;entryDx=0;entryDy=0;" target="atividade">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="971" y="1320" />
+              <mxPoint x="1440" y="1320" />
+              <mxPoint x="1440" y="1068.1" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rec_label" parent="relacoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=19;fontColor=#26354a;strokeColor=none;fillColor=none;" value="Exige • recursivo 1:N" vertex="1">
+          <mxGeometry height="34" width="340" x="1060" y="1273" as="geometry" />
+        </mxCell>
+        <mxCell id="pessoas" parent="0" value="02 - Gestao de Pessoas" />
+        <mxCell id="pessoa" parent="pessoas" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=23;fillColor=#e9f1ff;strokeColor=#406a9c;strokeWidth=2;rounded=0;verticalAlign=top;spacingTop=13;fontStyle=1;" value="pessoa" vertex="1">
+          <mxGeometry height="195" width="520" x="800" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="pessoa_rows" parent="pessoa" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=16;spacingTop=7;fontFamily=Arial;fontSize=18;strokeColor=none;fillColor=none;" value="id_pessoa INT [PK, AI]&#xa;nome VARCHAR(100) [NN]&#xa;email VARCHAR(100) [NN, U]&#xa;telefone VARCHAR(15)" vertex="1">
+          <mxGeometry height="147" width="520" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="palestrante" parent="pessoas" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=23;fillColor=#e9f1ff;strokeColor=#406a9c;strokeWidth=2;rounded=0;verticalAlign=top;spacingTop=13;fontStyle=1;" value="palestrante" vertex="1">
+          <mxGeometry height="160" width="520" x="110" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="palestrante_rows" parent="palestrante" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=16;spacingTop=7;fontFamily=Arial;fontSize=18;strokeColor=none;fillColor=none;" value="id_pessoa INT [PK, FK → pessoa]&#xa;minicurriculo VARCHAR(255)&#xa;area_especialidade VARCHAR(50)" vertex="1">
+          <mxGeometry height="112" width="520" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="participante" parent="pessoas" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=23;fillColor=#e9f1ff;strokeColor=#406a9c;strokeWidth=2;rounded=0;verticalAlign=top;spacingTop=13;fontStyle=1;" value="participante" vertex="1">
+          <mxGeometry height="125" width="520" x="1530" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="participante_rows" parent="participante" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=16;spacingTop=7;fontFamily=Arial;fontSize=18;strokeColor=none;fillColor=none;" value="id_pessoa INT [PK, FK → pessoa]&#xa;tipo_ingresso VARCHAR(20) [NN]" vertex="1">
+          <mxGeometry height="77" width="520" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="evento" parent="0" value="03 - Gestao do Evento" />
+        <mxCell id="atividade" parent="evento" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=23;fillColor=#e9f4e8;strokeColor=#4d8152;strokeWidth=2;rounded=0;verticalAlign=top;spacingTop=13;fontStyle=1;" value="atividade" vertex="1">
+          <mxGeometry height="335" width="570" x="800" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="atividade_rows" parent="atividade" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=16;spacingTop=7;fontFamily=Arial;fontSize=18;strokeColor=none;fillColor=none;" value="id_atividade INT [PK, AI]&#xa;titulo VARCHAR(150) [NN]&#xa;descricao VARCHAR(255)&#xa;duracao_minutos INT&#xa;data_hora_inicio DATETIME [NN]&#xa;id_espaco INT [FK → espaco]&#xa;id_palestrante INT [FK → palestrante]&#xa;id_atividade_prerequisito INT [FK → atividade]" vertex="1">
+          <mxGeometry height="287" width="570" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="espaco" parent="evento" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=23;fillColor=#e9f4e8;strokeColor=#4d8152;strokeWidth=2;rounded=0;verticalAlign=top;spacingTop=13;fontStyle=1;" value="espaco" vertex="1">
+          <mxGeometry height="160" width="520" x="100" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="espaco_rows" parent="espaco" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=16;spacingTop=7;fontFamily=Arial;fontSize=18;strokeColor=none;fillColor=none;" value="id_espaco INT [PK, AI]&#xa;nome_local VARCHAR(50) [NN]&#xa;capacidade_maxima INT [NN]" vertex="1">
+          <mxGeometry height="112" width="520" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="inscricoes" parent="0" value="04 - Inscricoes" />
+        <mxCell id="inscricoes_atividade" parent="inscricoes" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=23;fillColor=#fff4d7;strokeColor=#b78b24;strokeWidth=2;rounded=0;verticalAlign=top;spacingTop=13;fontStyle=1;" value="inscricoes_atividade" vertex="1">
+          <mxGeometry height="195" width="610" x="1530" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="inscricoes_atividade_rows" parent="inscricoes_atividade" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=16;spacingTop=7;fontFamily=Arial;fontSize=18;strokeColor=none;fillColor=none;" value="id_participante INT [PK*, FK → participante]&#xa;id_atividade INT [PK*, FK → atividade]&#xa;data_inscricao DATETIME&#xa;status_checkin BOOLEAN [DEFAULT FALSE]" vertex="1">
+          <mxGeometry height="147" width="610" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="nm_explicacao" parent="inscricoes" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#26354a;strokeColor=none;fillColor=none;" value="N:M: Participante × Atividade&#xa;PK composta impede inscrição duplicada." vertex="1">
+          <mxGeometry height="65" width="630" x="1500" y="1160" as="geometry" />
+        </mxCell>
+        <mxCell id="credenciais" parent="0" value="05 - Credenciais" />
+        <mxCell id="credencial" parent="credenciais" style="whiteSpace=wrap;html=0;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=23;fillColor=#f0eaff;strokeColor=#7a5aa3;strokeWidth=2;rounded=0;verticalAlign=top;spacingTop=13;fontStyle=1;" value="credencial" vertex="1">
+          <mxGeometry height="160" width="520" x="1530" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="credencial_rows" parent="credencial" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=16;spacingTop=7;fontFamily=Arial;fontSize=18;strokeColor=none;fillColor=none;" value="id_credencial INT [PK, AI]&#xa;codigo VARCHAR(30) [NN, U]&#xa;id_participante INT [NN, U, FK → participante]" vertex="1">
+          <mxGeometry height="112" width="520" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="legenda" parent="0" value="06 - Legenda e orientacoes" />
+        <mxCell id="title" parent="legenda" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=30;fontColor=#26354a;strokeColor=none;fillColor=none;fontStyle=1;" value="FESTIVAL DE INOVAÇÃO" vertex="1">
+          <mxGeometry height="45" width="1800" x="70" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="legenda" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#26354a;strokeColor=none;fillColor=none;" value="Tabelas e tipos de dados • Inscrição materializa N:M • Credencial acrescenta o relacionamento 1:1" vertex="1">
+          <mxGeometry height="34" width="2000" x="70" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_pk" parent="legenda" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#26354a;strokeColor=none;fillColor=none;" value="PK: chave primária  •  FK: chave estrangeira  •  U: UNIQUE  •  NN: NOT NULL  •  AI: AUTO_INCREMENT" vertex="1">
+          <mxGeometry height="40" width="2050" x="70" y="1400" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_pk2" parent="legenda" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#26354a;strokeColor=none;fillColor=none;" value="PK* = as duas colunas juntas formam a chave primária. Colunas PK são obrigatórias. As demais, sem NN, aceitam NULL." vertex="1">
+          <mxGeometry height="35" width="2050" x="70" y="1445" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_card" parent="legenda" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#26354a;strokeColor=none;fillColor=none;" value="Rótulos 1:1 e 1:N indicam máximos. Mínimos e papéis estão na página conceitual. Herança preserva o mesmo id_pessoa." vertex="1">
+          <mxGeometry height="35" width="2050" x="70" y="1490" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_fk" parent="legenda" style="text;html=0;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#26354a;strokeColor=none;fillColor=none;" value="Uma atividade pode ter 0..1 espaço, 0..1 palestrante e 0..1 pré-requisito. Cada credencial exige um participante único." vertex="1">
+          <mxGeometry height="35" width="2050" x="70" y="1535" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
